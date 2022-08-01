@@ -41,6 +41,6 @@ public class WikipediaPage {
 	
 	public void takeScreenshot() throws IOException {
 		File scrFile = ((TakesScreenshot)_driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrFile, new File("c:\\screenshot.png"));
+		FileUtils.copyFile(scrFile, new File(".\\screenshots\\screenshot.png"));
 	}
 }

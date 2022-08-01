@@ -5,19 +5,7 @@ Feature: Creating and fetching User Details
 
 Scenario: Create user
 
-    * def user =
-    """
-			{
-				"id": 0,
-				"username": "jhenigc",
-				"firstName": "Jheni",
-				"lastName": "Gomes",
-				"email": "jhenigc@test.com",
-				"password": "jhenipass",
-				"phone": "666777888",
-				"userStatus": 0
-			}
-    """
+    * def user = read('classpath:createUserPayload.json')
     
     Given path '/user'
 		And request user
